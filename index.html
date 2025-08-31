@@ -6,41 +6,40 @@
 <title>Toastmasters Awards Voting</title>
 <link rel="icon" href="https://imgs.search.brave.com/5PKYVDNULmpZoz9QSEnubWzI1Jh3oJmAbL8EhcsJC6c/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/MC8wNS9Ub2FzdG1h/c3RlcnNfMjAxMS5w/bmcvNTEycHgtVG9h/c3RtYXN0ZXJzXzIw/MTEucG5n" type="image/png">
 <style>
-  :root{
-    --bg:#f3f5f7; --panel:#ffffff; --muted:#6b7280; --text:#111827;
-    --brand:#0072CE; --accent:#FF6A13; --ok:#10b981; --danger:#ef4444;
-    --radius:8px;
-  }
-  *{box-sizing:border-box;}
-  body{margin:0; font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial; background:var(--bg); color:var(--text); min-height:100vh; display:flex; flex-direction:column; align-items:center; padding:20px;}
-  .header-top{width:100%; max-width:1100px; display:flex; align-items:center; gap:12px; margin-bottom:20px;}
-  .header-top img{height:50px;}
-  .header-top h1{font-size:24px; color:var(--brand); margin:0;}
-  .app {width:100%; max-width:1100px; display:grid; grid-template-columns:1fr 380px; gap:20px;}
-  .card { background:var(--panel); padding:18px; border-radius:var(--radius); box-shadow:0 4px 15px rgba(0,0,0,.1); }
-  h1,h2,h3 { margin:4px 0; }
-  .muted{ color:var(--muted); font-size:13px; }
-  label{display:block; font-size:14px; color:var(--text); margin:10px 0 6px;}
-  input[type=text], input[type=password]{ width:100%; padding:10px; border-radius:6px; border:1px solid #d1d5db; background:#f9fafb; color:var(--text); }
-  button{ padding:10px 12px; border-radius:6px; border:none; cursor:pointer; font-weight:600;}
-  .btn-primary{ background:var(--brand); color:white; }
-  .btn-ghost{ background:#e5e7eb; color:var(--text); }
-  .small{ font-size:13px; padding:6px 8px; }
-  .hidden{ display:none; }
-  .candidate-row{ display:flex; gap:8px; align-items:center; margin-bottom:8px; }
-  .inline-btn{ padding:6px 8px; border-radius:6px; border:none; cursor:pointer; }
-  .danger{ background:var(--danger); color:white; }
-  .ok{ background:var(--ok); color:white; }
-  .results-item{ display:flex; justify-content:space-between; padding:8px; border-radius:6px; background:#f3f4f6; margin-bottom:6px; }
-  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:12px; }
-  #copyright { text-align:center; color:var(--muted); font-size:13px; margin-top:20px; }
-  #copyright div{ margin:2px 0; }
-  @media (max-width:980px){ .app{ grid-template-columns: 1fr; } .card { margin-bottom:12px; } }
+:root{
+  --bg:#f3f5f7; --panel:#ffffff; --muted:#6b7280; --text:#111827;
+  --brand:#0072CE; --accent:#FF6A13; --ok:#10b981; --danger:#ef4444;
+  --radius:8px;
+}
+*{box-sizing:border-box;}
+body{margin:0; font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial; background:var(--bg); color:var(--text); min-height:100vh; display:flex; flex-direction:column; align-items:center; padding:20px;}
+.header-top{width:100%; max-width:1100px; display:flex; align-items:center; gap:12px; margin-bottom:20px;}
+.header-top img{height:50px;}
+.header-top h1{font-size:24px; color:var(--brand); margin:0;}
+.app {width:100%; max-width:1100px; display:grid; grid-template-columns:1fr 380px; gap:20px;}
+.card { background:var(--panel); padding:18px; border-radius:var(--radius); box-shadow:0 4px 15px rgba(0,0,0,.1); }
+h1,h2,h3 { margin:4px 0; }
+.muted{ color:var(--muted); font-size:13px; }
+label{display:block; font-size:14px; color:var(--text); margin:10px 0 6px;}
+input[type=text], input[type=password]{ width:100%; padding:10px; border-radius:6px; border:1px solid #d1d5db; background:#f9fafb; color:var(--text); }
+button{ padding:10px 12px; border-radius:6px; border:none; cursor:pointer; font-weight:600;}
+.btn-primary{ background:var(--brand); color:white; }
+.btn-ghost{ background:#e5e7eb; color:var(--text); }
+.small{ font-size:13px; padding:6px 8px; }
+.hidden{ display:none; }
+.candidate-row{ display:flex; gap:8px; align-items:center; margin-bottom:8px; }
+.inline-btn{ padding:6px 8px; border-radius:6px; border:none; cursor:pointer; }
+.danger{ background:var(--danger); color:white; }
+.ok{ background:var(--ok); color:white; }
+.results-item{ display:flex; justify-content:space-between; padding:8px; border-radius:6px; background:#f3f4f6; margin-bottom:6px; }
+.footer { text-align:center; color:var(--muted); font-size:12px; margin-top:12px; }
+#copyright { text-align:center; color:var(--muted); font-size:13px; margin-top:20px; }
+#copyright div{ margin:2px 0; }
+@media (max-width:980px){ .app{ grid-template-columns: 1fr; } .card { margin-bottom:12px; } }
 </style>
 </head>
 <body>
 
-<!-- Header -->
 <div class="header-top">
   <img src="https://imgs.search.brave.com/5PKYVDNULmpZoz9QSEnubWzI1Jh3oJmAbL8EhcsJC6c/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/MC8wNS9Ub2FzdG1h/c3RlcnNfMjAxMS5w/bmcvNTEycHgtVG9h/c3RtYXN0ZXJzXzIw/MTEucG5n" alt="Toastmasters Logo">
   <h1>Toastmasters Club of Pune South East</h1>
@@ -57,12 +56,10 @@
     </div>
 
     <hr style="border:0;height:1px;background:#e5e7eb;margin:12px 0;">
-
     <div id="voting-form">
       <label for="voterName">Your Name (optional)</label>
       <input id="voterName" type="text" placeholder="Type your name (optional)">
       <div id="categoryContainer"></div>
-
       <div style="display:flex; gap:8px; margin-top:12px;">
         <button id="submitVoteBtn" class="btn-primary" style="flex:1">Submit Vote</button>
         <button id="clearBtn" class="btn-ghost small">Clear</button>
@@ -99,7 +96,6 @@
     </div>
 
     <hr style="border:0;height:1px;background:#e5e7eb;margin:12px 0;">
-
     <div id="adminContent">
       <div>
         <h3 style="margin:0 0 8px 0">Manage Candidates</h3>
@@ -121,7 +117,6 @@
   </div>
 </div>
 
-<!-- Copyright -->
 <div id="copyright">
   <div>© 2025 Toastmasters Club of Pune Southeast</div>
   <div>Designed & Developed by TM Parth</div>
@@ -181,6 +176,11 @@ let currentCategoryIndex = 0;
 function qDocRef(categoryKey) { return doc(db, 'candidates', categoryKey); }
 
 function renderCategoryForm() {
+  if(currentCategoryIndex >= CATEGORY_ORDER.length){
+    categoryContainer.innerHTML = '<div style="color:var(--ok)">You have voted for all categories. Thank you!</div>';
+    submitVoteBtn.disabled = true;
+    return;
+  }
   const cat = CATEGORY_ORDER[currentCategoryIndex];
   const names = currentCandidates[cat.key] || [];
   categoryContainer.innerHTML = '';
@@ -189,8 +189,7 @@ function renderCategoryForm() {
   categoryContainer.appendChild(label);
   names.forEach(name=>{
     const div = document.createElement('div');
-    const radio = document.createElement('input');
-    radio.type='radio'; radio.name='candidate'; radio.value=name;
+    const radio = document.createElement('input'); radio.type='radio'; radio.name='candidate'; radio.value=name;
     const span = document.createElement('span'); span.textContent=name; span.style.marginLeft='6px';
     div.appendChild(radio); div.appendChild(span);
     categoryContainer.appendChild(div);
@@ -201,10 +200,8 @@ function renderCategoryForm() {
 function renderAdminEditor() {
   categoriesEditor.innerHTML = '';
   CATEGORY_ORDER.forEach(cat=>{
-    const box = document.createElement('div');
-    box.style.marginBottom='12px';
-    const titleRow = document.createElement('div');
-    titleRow.style.display='flex'; titleRow.style.justifyContent='space-between'; titleRow.style.alignItems='center';
+    const box = document.createElement('div'); box.style.marginBottom='12px';
+    const titleRow = document.createElement('div'); titleRow.style.display='flex'; titleRow.style.justifyContent='space-between'; titleRow.style.alignItems='center';
     const h = document.createElement('div'); h.textContent = cat.title; h.style.fontWeight='700';
     const saveBtn = document.createElement('button'); saveBtn.textContent='Save'; saveBtn.className='inline-btn ok'; saveBtn.style.fontSize='13px';
     saveBtn.onclick = async ()=>{
@@ -239,7 +236,6 @@ function renderAdminEditor() {
     };
     newRow.appendChild(newInp); newRow.appendChild(addBtn);
     list.appendChild(newRow);
-
     box.appendChild(list);
     categoriesEditor.appendChild(box);
   });
@@ -250,15 +246,15 @@ function renderResults(snapshot){
   liveResults.innerHTML='';
   const votesData={};
   CATEGORY_ORDER.forEach(cat=>votesData[cat.key]={});
+  
   snapshot.forEach(doc=>{
     const data = doc.data();
     CATEGORY_ORDER.forEach(cat=>{
       const vote = data[cat.key];
-      if(vote){
-        votesData[cat.key][vote] = (votesData[cat.key][vote]||0)+1;
-      }
+      if(vote) votesData[cat.key][vote] = (votesData[cat.key][vote]||0)+1;
     });
   });
+
   CATEGORY_ORDER.forEach(cat=>{
     const div = document.createElement('div');
     const h = document.createElement('div'); h.textContent=cat.title; h.style.fontWeight='700'; div.appendChild(h);
@@ -274,9 +270,7 @@ function renderResults(snapshot){
 
 // Load Candidates
 unsubscribeCandidates = onSnapshot(candidatesCol, snapshot=>{
-  snapshot.forEach(doc=>{
-    currentCandidates[doc.id] = doc.data().names || [];
-  });
+  snapshot.forEach(doc=>{ currentCandidates[doc.id] = doc.data().names || []; });
   renderCategoryForm();
   if(isAdmin) renderAdminEditor();
 });
@@ -288,6 +282,7 @@ unsubscribeVotes = onSnapshot(votesCol, snapshot=>{
 
 // Voting
 submitVoteBtn.onclick = async ()=>{
+  if(currentCategoryIndex >= CATEGORY_ORDER.length) return;
   const radios = document.querySelectorAll('input[name=candidate]');
   const selected = Array.from(radios).find(r=>r.checked);
   if(!selected){ voteMsg.textContent='Please select a candidate'; return; }
@@ -297,7 +292,9 @@ submitVoteBtn.onclick = async ()=>{
   if(voterName) voteObj['voterName']=voterName;
   voteObj['timestamp']=serverTimestamp();
   await addDoc(votesCol, voteObj);
-  voteMsg.textContent='Vote submitted successfully!';
+  voteMsg.textContent=`Vote submitted for "${CATEGORY_ORDER[currentCategoryIndex].title}"`;
+  currentCategoryIndex++;
+  setTimeout(()=>{ voteMsg.textContent=''; renderCategoryForm(); }, 1200);
 };
 
 // Clear form
@@ -315,6 +312,7 @@ adminLoginBtn.onclick=()=>{
     adminLoginBox.classList.add('hidden');
     adminLoginError.style.display='none';
     renderAdminEditor();
+    getDocs(votesCol).then(snap=>renderResults(snap));
   } else {
     adminLoginError.textContent='Incorrect password'; adminLoginError.style.display='block';
   }
@@ -324,9 +322,9 @@ adminLoginBtn.onclick=()=>{
 adminLogoutBtn.onclick=()=>{ isAdmin=false; adminCard.classList.add('hidden'); voterCard.classList.remove('hidden'); };
 
 // Clear all votes
-clearVotesBtn.onclick=async ()=>{
-  const snapshot = await getDocs(votesCol);
-  snapshot.forEach(async docu=>{ await deleteDoc(doc(db,'votes',docu.id)); });
+clearVotesBtn.onclick=async()=>{
+  const snap = await getDocs(votesCol);
+  snap.forEach(async docSnap=>{ await deleteDoc(doc(votesCol, docSnap.id)); });
 };
 </script>
 </body>
